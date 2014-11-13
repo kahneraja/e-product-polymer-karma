@@ -1,0 +1,9 @@
+<script src="../bower_components/webcomponentsjs/webcomponents.js"></script>
+<link rel="import" href="../bower_components/core-icon-button/core-icon-button.html">
+<!-- a simple example of a custom element with a custom attribute. -->
+<polymer-element name="e-product" attributes="name price" noscript>
+    <template>
+        <h2>{{name}}</h2>
+        <div id="price">${{price}}</div>
+    </template>
+</polymer-element>
