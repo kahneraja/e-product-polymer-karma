@@ -13,16 +13,14 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'app/tests/*.js',
-      'app/elements/*.js',
-      'app/elements/*.html',
+      {pattern: 'app/elements/*.html', watched: false, included: true, served: true},
+      {pattern: 'app/tests/*.spec.js', watched: false, included: true, served: true},
       {pattern: 'app/**', watched: false, included: false, served: true}
     ],
 
     // list of files to exclude
     exclude: [
     ],
-
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -60,8 +58,9 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true,
+    singleRun: false,
 
-    urlRoot: '',
+    // Are you trying to remove this base folder? It seems this is currently not possible when working with Karma.
+    urlRoot: 'base/',
   });
 };

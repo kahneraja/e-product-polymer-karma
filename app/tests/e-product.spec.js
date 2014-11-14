@@ -12,8 +12,13 @@ describe("e-product element", function() {
 
   });
 
-  it('should be 100.33', function() {
+  it('amount should be 100.33', function() {
     var price = $el.shadowRoot.getElementById('price').innerHTML;
     expect(price).to.equal("$33.564");
+  });
+
+  it('name should be "another great product"', function() {
+    var price = $el.shadowRoot.getElementById('name').innerHTML;
+    expect(price).to.equal("another great product");
   });
 });

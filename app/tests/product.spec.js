@@ -1,3 +1,8 @@
+Product = {
+  name: 'Cool product!',
+  price : 100.33
+};
+
 describe("A Product suite", function() {
    beforeEach(function() { });
    afterEach(function() { });
