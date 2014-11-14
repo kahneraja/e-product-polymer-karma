@@ -11,7 +11,7 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['mocha', 'chai'],
 
-    // list of files / patterns to load in the browser
+    // list of files / patterns to load in the browser. each file loaded appends a timestamp.
     files: [
       {pattern: 'app/elements/*.html', watched: false, included: true, served: true},
       {pattern: 'app/tests/*.spec.js', watched: false, included: true, served: true},
